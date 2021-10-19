@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+
+}
+
+body {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.blindsWrapper {
+    min-width: 600px;
+}
+
+.blindsItem {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid green;
+}
+
+.blindsItemTitle {
+    padding: 10px;
+    background-color: lightgreen;
+    cursor: pointer;
+    color: blue;
+}
+
+/*.blindsItemTitle::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 20px;
+    font-size: 24px;
+}*/
+
+.blindsItemContent {
+    position: relative;
+    background-color: aquamarine;
+    color: green;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.blindsItem.active .blindsItemContent {
+    height: 100px;
+}
+
+/*
+.blindsItem.active .blindsItemTitle::before {
+    content: '-';
+    font-size: 24px;
+}
+*/
